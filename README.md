@@ -14,23 +14,6 @@ S3에 학습에 필요한 데이터를 업로드합니다. 이후, SageMaker가 
 
 학습에 필요한 코드는 노트북에서 로드하여 학습클러스터에서 사용합니다. 
 
-## Environment variables
-
-[SageMaker environment variables](https://github.com/aws/sagemaker-training-toolkit/blob/master/ENVIRONMENT_VARIABLES.md)을 참조하여, 코드상에 주요 경로를 환경변수로부터 읽어와서 사용합니다. 
-
-```python
-# /opt/ml/model
-parser.add_argument('--model_dir', type=str, default=os.environ.get('SM_MODEL_DIR’)) 
-
-# /opt/ml/input/data/training
-parser.add_argument('--dataset_dir', type=str, default=os.environ.get('SM_CHANNEL_TRAINING’)) 
-
-# /opt/ml/output/data/algo-1
-parser.add_argument('--output_data_dir', type=str,default=os.environ.get('SM_OUTPUT_DATA_DIR’))
-
-# /opt/ml/output
-parser.add_argument('--output-dir', type=str,default=os.environ.get('SM_OUTPUT_DIR’))
-```
 
 
 ## Reference

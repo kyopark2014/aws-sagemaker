@@ -8,7 +8,7 @@
 pip install sagemaker-experiments
 ```
 
-## SageMaker Experiments & Trials 
+## Experiments & Trials 
 
 ```python
 from smexperiments.experiment import Experiment 
@@ -37,7 +37,7 @@ estimator.fit(
             "TrialComponentDisplayName": "Training"})
 ```
 
-## Example
+## 실제적인 Example
 
 아래에서는 [training-experiment](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training-experiment.ipynb) 코드에서 Experiment 관련된 부분을 설명합니다. 
 

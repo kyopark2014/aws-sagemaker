@@ -2,6 +2,8 @@
 
 ## 학습용 Container 
 
+SageMaker에서 [학습용 Container 생성시 폴더의 경로 및 환경변수](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-container.md)에 대해 설명합니다. 
+
 ## 학습용 Cluster 정의
 
 학습 Cluster 사용할 IAM role과 Hyperparameter를 아래와 같이 정의합니다. 여기서, sagemaker.get_execution_role()을 하면 현재 노트북의 role을 가져옵니다. 별도의 role을 사용할 경우에 해당 role의 arn을 입력합니다. 

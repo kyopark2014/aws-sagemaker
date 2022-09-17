@@ -79,19 +79,6 @@ estimator = PyTorch(
 )
 ```
 
-Estimator에서 사용하는 값들은 아래와 같이 정의합니다. sagemaker.get_execution_role()을 하면 현재 노트북의 role을 가져옵니다. 별도의 role을 사용할 경우에 해당 role의 arn을 입력합니다. 
-
-```python
-import sagemaker 
-
-sagemaker_session = sagemaker.Session()	 	# SageMaker 세션 정의
-role = sagemaker.get_execution_role()		# SageMaker 노트북에서 사용하는 role 활용
-
-hyperparameters = {“batch_size” : 32 ,
-		   “lr” : 1e-4 , 
-		   “image_size” : 128 }		# 학습 코드의 arguments 값
-```
-
 추가적으로 아래와 같은 파라메터를 estimater에서 추가하여 사용할수 있습니다. 
 
 ```python
@@ -103,6 +90,20 @@ estimator = PyTorch(
 	checkpoint_s3_uri= checkpoint_s3_uri,    # checkpoints 저장 S3 위치
 	…		
 )
+```
+
+
+Estimator에서 사용하는 값들은 아래와 같이 정의합니다. sagemaker.get_execution_role()을 하면 현재 노트북의 role을 가져옵니다. 별도의 role을 사용할 경우에 해당 role의 arn을 입력합니다. 
+
+```python
+import sagemaker 
+
+sagemaker_session = sagemaker.Session()	 	# SageMaker 세션 정의
+role = sagemaker.get_execution_role()		# SageMaker 노트북에서 사용하는 role 활용
+
+hyperparameters = {“batch_size” : 32 ,
+		   “lr” : 1e-4 , 
+		   “image_size” : 128 }		# 학습 코드의 arguments 값
 ```
 
 

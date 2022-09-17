@@ -129,7 +129,9 @@ estimator = PyTorch(
 )
 ```
 
+## SagmeMaker Experiment
 
+[Experiment와 Trial](https://github.com/kyopark2014/aws-sagemaker/blob/main/sagemaker-experiment.md)을 이용하여 여러 시도에 대해 사용자의 하이퍼파라미터, 평가 지표(metrics) 등을 기록 및 추적할 수 있습니다. 
 
 
 ## SageMaker Processing 

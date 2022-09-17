@@ -75,7 +75,7 @@ estimator = PyTorch(
 	instance_count=1,        				# 학습 인스턴스 수
 	instance_type="ml.p4d.24xlarge",             		# 학습 인스턴스 명
 	sagemaker_session=sagemaker_session,			# SageMaker 세션
-	hyperparameters=hyperparameters,				# 하이퍼파라미터 설정
+	hyperparameters=hyperparameters,			# 하이퍼파라미터 설정
 )
 ```
 

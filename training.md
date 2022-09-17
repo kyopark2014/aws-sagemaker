@@ -92,6 +92,21 @@ hyperparameters = {“batch_size” : 32 ,
 		   “image_size” : 128 }		# 학습 코드의 arguments 값
 ```
 
+추가적으로 아래와 같은 파라메터를 estimater에서 추가하여 사용할수 있습니다. 
+
+```python
+estimator = PyTorch( 
+	… ,
+	max_run=5*24*60*60,			# 최대 학습 수행 시간 (초)
+	use_spot_instances=True, 		# spot 인스턴스 사용 여부
+	max_wait=3*60*60, 			# spot 사용 시 자원 재확보를 위한 대기 시간
+	checkpoint_s3_uri= checkpoint_s3_uri,    # checkpoints 저장 S3 위치
+	…		
+)
+```
+
+
+
 #### Data path
 
 fit에서 추가되는 data_path는 S3, EFS, FSx for Lustre 등 3가지 타입이 가능합니다.

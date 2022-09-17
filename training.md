@@ -145,8 +145,11 @@ estimator.fit(
 
 딥러닝 분산학습의 경우 노트북 인스턴스를 GPU 유형으로 생성합니다. 단, SageMaker의 Data parallel과 Model parallel Library는 ml.p3.16xlarge이상에서 테스트 가능합니다. 이것은 임시적 사용이며 비용을 위해 테스트 후 CPU 유형으로 변경하는것이 좋습니다.
 
+- Local Mode 
 <img width="658" alt="image" src="https://user-images.githubusercontent.com/52392004/190835603-a4ae3ab8-efeb-4d46-8312-4772ca49a675.png">
 
+- 실제 학습 Mode
+<img width="658" alt="image" src="https://user-images.githubusercontent.com/52392004/190835617-68cf5d32-cb0f-436f-b9f0-5684302521fc.png">
 
 ## Reference
 

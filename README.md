@@ -10,9 +10,9 @@ SageMaker에서 제공되는 jupyter Notebook을 통해, 학습에 필요한 데
 
 ## 학습방법
 
-S3에 학습에 필요한 데이터를 업로드합니다. 이후, SageMaker가 학습 클러스터로 S3의 학습데이터를 가져와서 학습을 수행하게 됩니다. 
+S3에 학습에 필요한 데이터를 업로드합니다. 이후, SageMaker가 학습 클러스터로 S3의 학습데이터를 가져와서 학습을 수행하게 됩니다. 이때, 학습에 필요한 코드는 노트북에서 로드하여 학습클러스터에서 사용합니다. 
 
-학습에 필요한 코드는 노트북에서 로드하여 학습클러스터에서 사용합니다. 
+[SageMaker Training](https://github.com/kyopark2014/aws-sagemaker/tree/main/training-basic)에서는 xgboost를 이용한 ML 예제에 대한 예제를 설명하고 있습니다. 
 
 
 

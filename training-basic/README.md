@@ -52,7 +52,7 @@ estimator = PyTorch(
 ```
 
 
-#### Data path
+## Data path
 
 fit에서 추가되는 data_path는 S3, EFS, FSx for Lustre 등 3가지 타입이 가능합니다.
 

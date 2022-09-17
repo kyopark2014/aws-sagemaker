@@ -21,10 +21,13 @@ S3에 학습에 필요한 데이터를 업로드합니다. 이후, SageMaker가 
 ```python
 # /opt/ml/model
 parser.add_argument('--model_dir', type=str, default=os.environ.get('SM_MODEL_DIR’)) 
+
 # /opt/ml/input/data/training
 parser.add_argument('--dataset_dir', type=str, default=os.environ.get('SM_CHANNEL_TRAINING’)) 
+
 # /opt/ml/output/data/algo-1
 parser.add_argument('--output_data_dir', type=str,default=os.environ.get('SM_OUTPUT_DATA_DIR’))
+
 # /opt/ml/output
 parser.add_argument('--output-dir', type=str,default=os.environ.get('SM_OUTPUT_DIR’))
 ```

@@ -221,6 +221,29 @@ GPU/CPU 리소스 사용량은 아래처럼 CloudWatch를 통해 확인할 수 �
 
 <img width="725" alt="image" src="https://user-images.githubusercontent.com/52392004/190836077-464e9d89-8188-4814-8d8c-f8026ae55a5c.png">
 
+## SageMaker Processing 
+
+사전 처리, 후 처리 및 모델 평가를 실행할 수 있는 환경 제공합니다. S3의 데이터를 입력으로 받아 로직 처리 후 S3에 출력으로 저장합니다.
+
+```python
+# Built-in Scikit Learn Container or FrameworkProcessor
+from sagemaker.sklearn.processing import SKLearnProcessor
+from sagemaker.processing import Processor, ScriptProcessor, FrameworkProcessor
+
+processor= FrameworkProcessor(PyTorch, framework_version="1.10", 
+				   role=role, instance_type=‘ml.g5.xlarge’, 
+				   instance_count=1)
+
+from sagemaker.processing import ProcessingInput, ProcessingOutput
+
+processor.run(
+    code='preprocessing.py',
+    inputs=[ProcessingInput(source=INPUT_S3_URI, destination='/opt/ml/processing/input')],
+    outputs=[ProcessingOutput(source='/opt/ml/processing/output/train’, destination=OUTPUT_S3_URI_1),
+             ProcessingOutput(source='/opt/ml/processing/output/validation’, destination=OUTPUT_S3_URI_2)]
+)
+```
+
 
 
 ## Reference

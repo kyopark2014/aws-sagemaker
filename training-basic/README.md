@@ -13,7 +13,11 @@ import sagemaker
 
 sagemaker_session = sagemaker.Session()	 	# SageMaker 세션 정의
 role = sagemaker.get_execution_role()		# SageMaker 노트북에서 사용하는 role 활용
+```
 
+Hyperparameter를 정의합니다. 
+
+```python
 hyperparameters = {“batch_size” : 32 ,
 		   “lr” : 1e-4 , 
 		   “image_size” : 128 }		# 학습 코드의 arguments 값

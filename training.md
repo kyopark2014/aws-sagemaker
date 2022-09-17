@@ -79,6 +79,38 @@ estimator = PyTorch(
 )
 ```
 
+Estimator에서 사용하는 값들은 아래와 같이 정의합니다. sagemaker.get_execution_role()을 하면 현재 노트북의 role을 가져옵니다. 별도의 role을 사용할 경우에 해당 role의 arn을 입력합니다. 
+
+```python
+import sagemaker 
+
+sagemaker_session = sagemaker.Session()	 	# SageMaker 세션 정의
+role = sagemaker.get_execution_role()		# SageMaker 노트북에서 사용하는 role 활용
+
+hyperparameters = {“batch_size” : 32 ,
+		   “lr” : 1e-4 , 
+		   “image_size” : 128 }		# 학습 코드의 arguments 값
+```
+
+#### Data path
+
+fit에서 추가되는 data_path는 S3, EFS, FSx for Lustre 등 3가지 타입이 가능합니다.
+
+```python
+# S3 
+data_path = “s3://my_bucket/my_training_data/”
+
+# EFS
+data_path = FileSystemInput(file_system_id='fs-1’, file_system_type='EFS’,
+			   directory_path=‘/dataset’, file_system_access_mode=‘ro’)
+
+# FSx for Lustre
+data_path = FileSystemInput(file_system_id='fs-2’, file_system_type='FSxLustre’, 
+			   directory_path='/<mount-id>/dataset’, 
+			   file_system_access_mode='ro’)
+```
+
+
 ## 학습 시작
 
 학습 클러스터에서 사용할 데이터 경로와 channel_name을 선언한 후 실행합니다.

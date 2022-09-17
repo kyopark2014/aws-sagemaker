@@ -151,6 +151,72 @@ estimator.fit(
 - 실제 학습 Mode
 <img width="658" alt="image" src="https://user-images.githubusercontent.com/52392004/190835617-68cf5d32-cb0f-436f-b9f0-5684302521fc.png">
 
+## Matric
+
+### Matric definition
+
+학습 코드에서 아래와 같은 로그를 찍는데, Train_Loss를 matric으로 만들어 사용하고 싶은 케이스가 있다고 가정합니다. 
+
+```python
+Epoch : [2][6/10] Train_Time = 0.355 : (3.134) , Train_Speed = 1803.360 (204.190), Train_Loss = 1.0813320875 : (1.3528) , Train_Prec@1 = 76.250 : (68.958)
+```
+
+이때, matric 정보를 hooking하여 아래처럼 사용할 수 있습니다. 
+
+```python
+metric_definitions = [ { ‘Name’ : ‘train:Loss’, ‘Regex’ : ‘Train_Loss = (.*?) :’}, ...]
+```
+
+이후, estimator 정의시 아래처럼 matric_definitions을 추가합니다. 
+
+```python
+estimator = PyTorch( 
+	source_dir="code",                                   	# 학습 코드 폴더 지정
+	entry_point="train_pytorch_smdataparallel_mnist.py",	# 실행 학습 스크립트 명
+	role=role, 						# 학습 클러스터에서 사용할 Role
+	framework_version="1.10",				# Pytorch 버전
+	py_version="py38", 					# Python 버전
+	instance_count=1,        				# 학습 인스턴스 수
+	instance_type="ml.p4d.24xlarge",             		# 학습 인스턴스 명
+	sagemaker_session=sagemaker_session,			# SageMaker 세션
+	hyperparameters=hyperparameters,			# 하이퍼파라미터 설정
+	**metric_definitions=metric_definitions,       		# Matric definitions
+)
+```
+
+## SageMaker Experiments & Trials 
+
+아래와 같이 Experiment와 Trial을 생성합니다. 
+
+```python
+from smexperiments.experiment import Experiment 
+from smexperiments.trial import Trial
+
+experiment = Experiment.create(
+    experiment_name=”experiment_name", 
+    description="Classification of mnist hand-written digits”
+)
+
+trial = Trial.create(
+    trial_name=“trial_name”, 
+    experiment_name=experiment.experiment_name,
+    sagemaker_boto_client=sm,)
+```
+
+이후 실제 학습을 시도할때 아래와 같이 "experiment_config"을 넣어서 수행합니다. 
+
+```python
+channel_name = ”training”
+estimator.fit(
+	inputs={channel_name : data_path},
+	job_name=job_name,
+	experiment_config={
+            "TrialName": trial.trial_name,
+            "TrialComponentDisplayName": "Training"})
+```
+
+
+
 ## Reference
 
 [Amazon SageMaker 모델 학습 방법 소개 - AWS AIML 스페셜 웨비나](https://www.youtube.com/watch?v=oQ7glJfD-BQ&list=PLORxAVAC5fUULZBkbSE--PSY6bywP7gyr)

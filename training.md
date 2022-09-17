@@ -215,11 +215,6 @@ estimator.fit(
             "TrialComponentDisplayName": "Training"})
 ```
 
-## Monitoring
-
-GPU/CPU 리소스 사용량은 아래처럼 CloudWatch를 통해 확인할 수 있습니다.
-
-<img width="725" alt="image" src="https://user-images.githubusercontent.com/52392004/190836077-464e9d89-8188-4814-8d8c-f8026ae55a5c.png">
 
 ## SageMaker Processing 
 
@@ -245,6 +240,12 @@ processor.run(
              ProcessingOutput(source='/opt/ml/processing/output/validation’, destination=OUTPUT_S3_URI_2)]
 )
 ```
+
+## Monitoring
+
+GPU/CPU 리소스 사용량은 아래처럼 CloudWatch를 통해 확인할 수 있습니다.
+
+<img width="725" alt="image" src="https://user-images.githubusercontent.com/52392004/190836077-464e9d89-8188-4814-8d8c-f8026ae55a5c.png">
 
 
 

@@ -37,6 +37,8 @@ estimator.fit(
 
 [Amazon SageMaker Experiments Python SDK](https://sagemaker-experiments.readthedocs.io/en/latest/index.html)
 
+[github-SageMaker Experiments Python SDK](https://github.com/aws/sagemaker-experiments)
+
 [Amazon SageMaker 모델 학습 방법 소개 - AWS AIML 스페셜 웨비나](https://www.youtube.com/watch?v=oQ7glJfD-BQ&list=PLORxAVAC5fUULZBkbSE--PSY6bywP7gyr)
 
 [SageMaker 스페셜 웨비나 - Github](https://github.com/aws-samples/aws-ai-ml-workshop-kr/tree/master/sagemaker/sm-special-webinar)

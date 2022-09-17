@@ -39,6 +39,24 @@ os.environ.get("SM_CHANNEL_${channel_name}')
 chk파일등은 "/opt/ml/checkpoints"에 저장되고, 거의 실시간으로 S3 bucket에 복사 됩니다. 
 
 
+## Environment variables
+
+[SageMaker environment variables](https://github.com/aws/sagemaker-training-toolkit/blob/master/ENVIRONMENT_VARIABLES.md)을 참조하여, 코드상에 주요 경로를 환경변수로부터 읽어와서 사용합니다. 
+
+```python
+# /opt/ml/model
+parser.add_argument('--model_dir', type=str, default=os.environ.get('SM_MODEL_DIR’)) 
+
+# /opt/ml/input/data/training
+parser.add_argument('--dataset_dir', type=str, default=os.environ.get('SM_CHANNEL_TRAINING’)) 
+
+# /opt/ml/output/data/algo-1
+parser.add_argument('--output_data_dir', type=str,default=os.environ.get('SM_OUTPUT_DATA_DIR’))
+
+# /opt/ml/output
+parser.add_argument('--output-dir', type=str,default=os.environ.get('SM_OUTPUT_DIR’))
+```
+
 
 ## Reference
 

@@ -1,5 +1,7 @@
 # Training
 
+## 학습용 Container의 구조 
+
 Training시 생성되는 Container에 있는 폴더의 구조는 아래와 같습니다.
 
 ```c
@@ -39,7 +41,7 @@ os.environ.get("SM_CHANNEL_${channel_name}')
 chk파일등은 "/opt/ml/checkpoints"에 저장되고, 거의 실시간으로 S3 bucket에 복사 됩니다. 
 
 
-## Environment variables
+### Environment variables
 
 [SageMaker environment variables](https://github.com/aws/sagemaker-training-toolkit/blob/master/ENVIRONMENT_VARIABLES.md)을 참조하여, 코드상에 주요 경로를 환경변수로부터 읽어와서 사용합니다. 
 

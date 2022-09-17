@@ -31,4 +31,7 @@ ML을 Training하기 위해 필요한 데이터와 소스는 아래 경로에 �
 os.environ.get("SM_CHANNEL_${channel_name}')
 ```
 
+## Reference
+
+[Amazon SageMaker 모델 학습 방법 소개 - AWS AIML 스페셜 웨비나](https://www.youtube.com/watch?v=oQ7glJfD-BQ&list=PLORxAVAC5fUULZBkbSE--PSY6bywP7gyr)
 

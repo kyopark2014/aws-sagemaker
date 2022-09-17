@@ -61,6 +61,20 @@ parser.add_argument('--output-dir', type=str,default=os.environ.get('SM_OUTPUT_D
 
 ## 학습용 Cluster 정의
 
+학습 Cluster 사용할 IAM role과 Hyperparameter를 아래와 같이 정의합니다. 여기서, sagemaker.get_execution_role()을 하면 현재 노트북의 role을 가져옵니다. 별도의 role을 사용할 경우에 해당 role의 arn을 입력합니다. 
+
+```python
+import sagemaker 
+
+sagemaker_session = sagemaker.Session()	 	# SageMaker 세션 정의
+role = sagemaker.get_execution_role()		# SageMaker 노트북에서 사용하는 role 활용
+
+hyperparameters = {“batch_size” : 32 ,
+		   “lr” : 1e-4 , 
+		   “image_size” : 128 }		# 학습 코드의 arguments 값
+```
+
+
 학습 클러스터의 인스턴스 종류/수, 실행할 학습 코드, 학습 환경 컨테이너 등을 Estimator로 정의합니다. 
 
 ```python
@@ -91,21 +105,6 @@ estimator = PyTorch(
 	…		
 )
 ```
-
-
-Estimator에서 사용하는 값들은 아래와 같이 정의합니다. sagemaker.get_execution_role()을 하면 현재 노트북의 role을 가져옵니다. 별도의 role을 사용할 경우에 해당 role의 arn을 입력합니다. 
-
-```python
-import sagemaker 
-
-sagemaker_session = sagemaker.Session()	 	# SageMaker 세션 정의
-role = sagemaker.get_execution_role()		# SageMaker 노트북에서 사용하는 role 활용
-
-hyperparameters = {“batch_size” : 32 ,
-		   “lr” : 1e-4 , 
-		   “image_size” : 128 }		# 학습 코드의 arguments 값
-```
-
 
 
 #### Data path

@@ -104,7 +104,7 @@ estimator.fit(
 
 ### Matric definition
 
-학습 코드에서 아래와 같은 로그를 찍는데, Train_Loss를 matric으로 만들어 사용하고 싶은 케이스가 있다고 가정합니다. 
+학습 코드에서 아래와 같은 로그를 찍는다고 가정하면, Train_Loss를 matric으로 만들어 사용하고 싶을 수 있습니다.
 
 ```python
 Epoch : [2][6/10] Train_Time = 0.355 : (3.134) , Train_Speed = 1803.360 (204.190), Train_Loss = 1.0813320875 : (1.3528) , Train_Prec@1 = 76.250 : (68.958)

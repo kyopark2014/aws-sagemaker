@@ -59,6 +59,27 @@ parser.add_argument('--output_data_dir', type=str,default=os.environ.get('SM_OUT
 parser.add_argument('--output-dir', type=str,default=os.environ.get('SM_OUTPUT_DIR’))
 ```
 
+## Cluster 정의
+
+학습 클러스터의 인스턴스 종류/수, 실행할 학습 코드, 학습 환경 컨테이너 등을 Estimator로 정의합니다. 
+
+```python
+from sagemaker.pytorch import PyTorch 
+
+estimator = PyTorch( 
+	source_dir="code",                                   	# 학습 코드 폴더 지정
+	entry_point="train_pytorch_smdataparallel_mnist.py",	# 실행 학습 스크립트 명
+	role=role, 						# 학습 클러스터에서 사용할 Role
+	framework_version="1.10",				# Pytorch 버전
+	py_version="py38", 					# Python 버전
+	instance_count=1,        				# 학습 인스턴스 수
+	instance_type="ml.p4d.24xlarge",             		# 학습 인스턴스 명
+	sagemaker_session=sagemaker_session,			# SageMaker 세션
+	hyperparameters=hyperparameters,				# 하이퍼파라미터 설정
+)
+```
+
+
 
 ## Reference
 

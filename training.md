@@ -215,6 +215,12 @@ estimator.fit(
             "TrialComponentDisplayName": "Training"})
 ```
 
+## Monitoring
+
+GPU/CPU 리소스 사용량은 아래처럼 CloudWatch를 통해 확인할 수 있습니다.
+
+<img width="449" alt="image" src="https://user-images.githubusercontent.com/52392004/190836064-c52ee317-31f7-46be-800b-8ba558bd463a.png">
+
 
 
 ## Reference

@@ -1,8 +1,14 @@
 # SageMaker Experiment
 
-## SageMaker Experiments & Trials 
-
 실험의 여러 시도에 대해 사용자의 하이퍼파라미터, 평가 지표(metrics) 등을 기록 및 추적할 수 있습니다. 사용법은 아래와 같이 Experiment와 Trial을 생성하여 사용하면 됩니다.
+
+## SageMaker Experiment 설치
+
+```c
+pip install sagemaker-experiments
+```
+
+## SageMaker Experiments & Trials 
 
 ```python
 from smexperiments.experiment import Experiment 
@@ -29,6 +35,49 @@ estimator.fit(
 	experiment_config={
             "TrialName": trial.trial_name,
             "TrialComponentDisplayName": "Training"})
+```
+
+## Example
+
+아래에서는 [training-experiment](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training-experiment.ipynb) 코드에서 Experiment 관련된 부분을 설명합니다. 
+
+1) Experiment를 선언합니다. 
+
+```python
+from smexperiments.experiment import Experiment
+from smexperiments.trial import Trial
+from time import strftime
+
+def create_experiment(experiment_name):
+    try:
+        sm_experiment = Experiment.load(experiment_name)
+    except:
+        sm_experiment = Experiment.create(experiment_name=experiment_name)
+        
+def create_trial(experiment_name):
+    create_date = strftime("%m%d-%H%M%s")       
+    sm_trial = Trial.create(trial_name=f'{experiment_name}-{create_date}',
+                            experiment_name=experiment_name)
+
+    job_name = f'{sm_trial.trial_name}'
+    return job_name  
+
+experiment_name='xgboost-poc-1'
+
+create_experiment(experiment_name)
+job_name = create_trial(experiment_name)
+```
+
+2) 학습할때 fit()에 아래처럼 넣어서 사용합니다. 
+
+```python
+estimator.fit(inputs = {'inputdata': inputs},
+                  job_name = job_name,
+                  experiment_config={
+                      'TrialName': job_name,
+                      'TrialComponentDisplayName': job_name,
+                  },
+                  wait=False)
 ```
 
 ## Reference 

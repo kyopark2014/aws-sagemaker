@@ -59,7 +59,7 @@ parser.add_argument('--output_data_dir', type=str,default=os.environ.get('SM_OUT
 parser.add_argument('--output-dir', type=str,default=os.environ.get('SM_OUTPUT_DIR’))
 ```
 
-## Cluster 정의
+## 학습용 Cluster 정의
 
 학습 클러스터의 인스턴스 종류/수, 실행할 학습 코드, 학습 환경 컨테이너 등을 Estimator로 정의합니다. 
 
@@ -79,7 +79,18 @@ estimator = PyTorch(
 )
 ```
 
+## 학습 시작
 
+학습 클러스터에서 사용할 데이터 경로와 channel_name을 선언한 후 실행합니다.
+
+```python
+channel_name = ”training”
+
+estimator.fit(
+	inputs={channel_name : data_path},
+	job_name=job_name
+)
+```
 
 ## Reference
 

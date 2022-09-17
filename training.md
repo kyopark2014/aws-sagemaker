@@ -225,6 +225,8 @@ GPU/CPU 리소스 사용량은 아래처럼 CloudWatch를 통해 확인할 수 �
 
 사전 처리, 후 처리 및 모델 평가를 실행할 수 있는 환경 제공합니다. S3의 데이터를 입력으로 받아 로직 처리 후 S3에 출력으로 저장합니다.
 
+아래에서는 processor를 정의한 후에 "preprocessing.py"을 이용해 데이터를 처리하고, 결과인 train/validation을 S3에 저장하는 코드를 보여주고 있습니다. 
+
 ```python
 # Built-in Scikit Learn Container or FrameworkProcessor
 from sagemaker.sklearn.processing import SKLearnProcessor

@@ -23,7 +23,7 @@ processor.run(
 )
 ```
 
-## Evaluation
+## Evaluation을 Processing을 이용해 수행하는 예제 
 
 [Sagemaker Processing](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training-processing.ipynb)에서는 processing을 설정하여 기생성된 model로 test dataset을 분석하는것을 보여줍니다. 
 

@@ -101,9 +101,7 @@ inputs
 ```python
 estimator.fit(inputs = {'inputdata': inputs},
                   wait=False)
-		  
-
-
+```
 
 
 

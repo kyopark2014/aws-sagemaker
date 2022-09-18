@@ -1,8 +1,10 @@
 # Dataset: 보험청구사기
 
-[Architect and build the full machine learning lifecycle with AWS: An end-to-end Amazon SageMaker demo](https://aws.amazon.com/blogs/machine-learning/architect-and-build-the-full-machine-learning-lifecycle-with-amazon-sagemaker/)의 데이터를 사용하여, 자동차 보험 청구 사기를 탐지하여 보고자 합니다.
+[Architect and build the full machine learning lifecycle with AWS: An end-to-end Amazon SageMaker demo](https://aws.amazon.com/blogs/machine-learning/architect-and-build-the-full-machine-learning-lifecycle-with-amazon-sagemaker/)에서는 자동차 보험 청구 사기를 탐지할 수 있는 데이터를 제공합니다.
 
-아래처럼 dataset의 구조를 확인 할 수 있습니다.
+## Dataset 구조 
+
+아래처럼 제공된 dataset의 구조를 확인 할 수 있습니다.
 
 ```python
 import pandas as pd
@@ -29,6 +31,7 @@ fraud
 dtype: int64
 ```
 
+## Dataset Column
 
 각 Cloumn에 대한 설명은 아래와 같습니다. 
 

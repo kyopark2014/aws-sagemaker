@@ -109,6 +109,11 @@ estimator.fit(inputs = {'inputdata': inputs},
                   wait=False)
 ```
 
+## 학습결과
+
+학습결과는 아래와 같이 CloudWatch에서도 확인 가능합니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/190894809-c61fa9e8-8aee-4687-8eed-59a9f74437c8.png)
 
 
 

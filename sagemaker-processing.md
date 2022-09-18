@@ -165,7 +165,7 @@ predictions_prob = model.predict(X_test)
 ```
 
 
-MSE를 계산합니다. 
+MSE와 표준편차를 계산합니다. 
 
 ```python
     mse = mean_squared_error(y_test, predictions)

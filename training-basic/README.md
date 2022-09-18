@@ -17,6 +17,21 @@ train_prep_df.groupby('fraud').sample(n=5)
 
 ![image](https://user-images.githubusercontent.com/52392004/190880293-1045d20b-9c5b-4d67-8036-55a502df54bb.png)
 
+전체에서 froud의 숫자는 아래와 같습니다. 
+
+```python
+train_prep_df.groupby('fraud').size()
+```
+
+이때의 결과는 아래와 같습니다. 
+```python
+fraud
+0    3869
+1     131
+dtype: int64
+```
+
+
 각 Cloumn에 대한 설명은 아래와 같습니다. 
 
 - fraud: 보험 청구의 사기 여부 입니다. 1 이면 사기, 0 이면 정상 청구 입니다.

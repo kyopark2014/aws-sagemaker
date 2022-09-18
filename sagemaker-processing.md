@@ -204,3 +204,10 @@ evaluation.json에는 아래와 같은 결과를 갖습니다.
    }
 }
 ```	
+
+## Processing History
+
+[Processing jobs Console](https://ap-northeast-2.console.aws.amazon.com/sagemaker/home?region=ap-northeast-2#/processing-jobs)에 접속하면, 아래와 같이 수행중인 또는 수행이 완료된 Processing job을 확인 할 수 있습니다.
+
+![noname](https://user-images.githubusercontent.com/52392004/190894470-68fd3631-9c0e-4870-a44a-fd67b8ed6d5e.png)
+

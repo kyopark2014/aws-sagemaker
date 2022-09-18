@@ -82,7 +82,7 @@ estimator.fit(inputs = {'inputdata': inputs},
 
 ## 결과 분석
 
-Jypyter Notebook에서 결과를 확인하기 위하여 아래와 같이 분석결과를 볼 수 있습니다. 
+Jupyter Notebook에서 결과를 확인하기 위하여 아래와 같이 분석결과를 볼 수 있습니다. 
 
 ```python
 from sagemaker.analytics import ExperimentAnalytics
@@ -104,7 +104,7 @@ trial_component_training_analytics.dataframe()[['Experiments', 'Trials', 'valida
                                                 'eta', 'max_depth', 'num_round', 'scale_pos_weight']]						
 ```
 
-이에 대한 결과는 아래와 같습니다. 
+이에 대한 결과는 아래와 같습니다. 아래와 같이 결정계수가 0.82인 결과를 얻었습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/190890749-0ea6ea80-14ae-443c-ad04-39fc6ff334ec.png)
 

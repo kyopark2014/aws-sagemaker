@@ -80,6 +80,29 @@ estimator.fit(inputs = {'inputdata': inputs},
                   wait=False)
 ```
 
+## 결과 분석
+
+```python
+from sagemaker.analytics import ExperimentAnalytics
+import pandas as pd
+pd.options.display.max_columns = 50
+pd.options.display.max_rows = 10
+pd.options.display.max_colwidth = 100
+
+trial_component_training_analytics = ExperimentAnalytics(
+    sagemaker_session= sagemaker_session,
+    experiment_name= experiment_name,
+    sort_by="metrics.validation:auc.max",        
+    sort_order="Descending",
+    metric_names=["validation:auc"]
+)
+
+trial_component_training_analytics.dataframe()[['Experiments', 'Trials', 'validation:auc - Min', 'validation:auc - Max',
+                                                'validation:auc - Avg', 'validation:auc - StdDev', 'validation:auc - Last', 
+                                                'eta', 'max_depth', 'num_round', 'scale_pos_weight']]
+						
+
+
 ## Training jobs
 
 [Training jobs Console](https://ap-northeast-2.console.aws.amazon.com/sagemaker/home?region=ap-northeast-2#/jobs)에 가면 현재진행중 또는 완료된 학습에 대한 Job 결과를 확인할 수 있습니다.

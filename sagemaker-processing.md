@@ -188,8 +188,19 @@ MSE를 계산합니다.
         f.write(json.dumps(report_dict))	
 ```
 
-결과적으로 
+결과적으로 아래와 같이 S3에 저장됩니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/190893891-3be9aff3-e8cb-4461-9394-751c3e8b953c.png)
 
+evaluation.json에는 아래와 같은 결과를 갖습니다. 
+
+```json
+{
+   "regression_metrics":{
+      "mse":{
+         "value":0.277,
+         "standard_deviation":0.4558848538830831
+      }
+   }
+}
 	

@@ -80,6 +80,13 @@ estimator.fit(inputs = {'inputdata': inputs},
                   wait=False)
 ```
 
+## Training jobs
+
+[Training jobs Console](https://ap-northeast-2.console.aws.amazon.com/sagemaker/home?region=ap-northeast-2#/jobs)에 가면 현재진행중 또는 완료된 학습에 대한 Job 결과를 확인할 수 있습니다.
+
+![noname](https://user-images.githubusercontent.com/52392004/190890620-14d7950c-353b-499c-93d5-46f0f18f2ca4.png)
+
+
 ## Reference 
 
 [Create an Amazon SageMaker Experiment](https://docs.amazonaws.cn/en_us/sagemaker/latest/dg/experiments-create.html)

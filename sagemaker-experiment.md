@@ -2,6 +2,8 @@
 
 실험의 여러 시도에 대해 사용자의 하이퍼파라미터, 평가 지표(metrics) 등을 기록 및 추적할 수 있습니다. 사용법은 아래와 같이 Experiment와 Trial을 생성하여 사용하면 됩니다.
 
+[Sagemaker Experiment](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training-experiment.ipynb)에서는 Experiment를 설정하여 얻어진 결과를 Jupyter notebook으로 확인 할 수 있습니다.
+
 ## SageMaker Experiment 설치
 
 ```c

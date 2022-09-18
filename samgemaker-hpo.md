@@ -38,7 +38,28 @@ tuner.fit(
 tuner.wait()
 ```
 
-HPO 완료후 결과는 
+HPO 완료후 결과는 아래와 같이 확인할 수 있습니다.
+
+```python
+from sagemaker.analytics import ExperimentAnalytics, HyperparameterTuningJobAnalytics
+import pandas as pd
+pd.options.display.max_columns = 50
+pd.options.display.max_rows = 10
+pd.options.display.max_colwidth = 100
+
+trial_component_training_analytics = HyperparameterTuningJobAnalytics(
+    sagemaker_session= sagemaker_session,
+    hyperparameter_tuning_job_name=job_name
+)
+
+trial_component_training_analytics.dataframe()[['TrainingJobName', 'TrainingJobStatus', 
+                                                'eta', 'max_depth', 'FinalObjectiveValue']]
+```
+
+이때의 결과는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/190898211-4c6c8801-1da4-43b4-8fc9-ce87cd33f9ad.png)
+
 
 
 ## Tuning jobs status

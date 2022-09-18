@@ -6,7 +6,7 @@
 
 ## XGBoost를 이용한 자동차 보험 청구사기 탐지 방법
 
-아래에서는 [SageMaker Training 예제](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/traning.ipynb)를 기준으로 설명합니다.
+아래에서는 [SageMaker Training 예제](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training.ipynb)를 기준으로 설명합니다.
 
 1) 라이브러리를 선언합니다. 
 

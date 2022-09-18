@@ -56,7 +56,7 @@ trial_component_training_analytics.dataframe()[['TrainingJobName', 'TrainingJobS
                                                 'eta', 'max_depth', 'FinalObjectiveValue']]
 ```
 
-이때의 결과는 아래와 같습니다. eta가 0.3이고, max_depth가 2일때 최적의 결정계수를 가지고 있습니다. 
+이때의 결과는 아래와 같습니다. eta가 0.3이고, max_depth가 2일때 최적의 결과를 가지고 있습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/190898211-4c6c8801-1da4-43b4-8fc9-ce87cd33f9ad.png)
 

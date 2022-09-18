@@ -22,3 +22,5 @@ processor.run(
              ProcessingOutput(source='/opt/ml/processing/output/validation’, destination=OUTPUT_S3_URI_2)]
 )
 ```
+
+[Sagemaker Processing](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training-processing.ipynb)에서는 processing을 설정하여 얻어진 결과를 Jupyter notebook으로 확인 할 수 있습니다.

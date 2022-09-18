@@ -185,7 +185,11 @@ MSE를 계산합니다.
 ```python
     evaluation_path = f"{output_evaluation_dir}/evaluation.json"
     with open(evaluation_path, "w") as f:
-        f.write(json.dumps(report_dict))
-	
-a	
+        f.write(json.dumps(report_dict))	
+```
+
+결과적으로 
+
+![noname](https://user-images.githubusercontent.com/52392004/190893891-3be9aff3-e8cb-4461-9394-751c3e8b953c.png)
+
 	

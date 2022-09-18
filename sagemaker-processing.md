@@ -135,9 +135,9 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/52392004/190893129-6ca3d28e-74cb-4fbf-9203-23bc4a544924.png)
 
-## Evalution.py 
+## Evalution.py 설명 
 
-[evalutation.py](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/src/evaluation.py)의 내용을 보면 아래와 같습니다. 
+[evalutation.py](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/src/evaluation.py)의 내용을 보면 아래와 같습니다. XGBoost 모델을 로드하여 test dataset으로 predict를 수행하고 결과를 S3에 저장합니다. 
 
 아래와 같이 model과 test dataset, output에 대한 경로를 읽어옵니다.
 

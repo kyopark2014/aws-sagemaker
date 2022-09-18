@@ -64,3 +64,12 @@ dtype: int64
 - incident_severity: 사고의 손실 정도 입니다. Minor, Major, Totaled 값이 존재 합니다.
 - authorities_contacted: 어떤 관련 기관에 연락을 했는지 입니다. Police, Ambuylance, Fire, None 값이 존재 합니다.
 - police_report_available: 경찰 보고서가 존재하는지를 기술합니다. Yes, No 의 값이 있습니다.
+
+
+![image](https://user-images.githubusercontent.com/52392004/188274540-dbc1b452-c2a9-47c9-b044-7af233f93e32.png)
+
+## Referece
+
+[Architect and build the full machine learning lifecycle with AWS: An end-to-end Amazon SageMaker demo](https://aws.amazon.com/ko/blogs/machine-learning/architect-and-build-the-full-machine-learning-lifecycle-with-amazon-sagemaker/)
+
+[SageMaker 스페셜 웨비나](https://github.com/aws-samples/aws-ai-ml-workshop-kr/tree/master/sagemaker/sm-special-webinar)

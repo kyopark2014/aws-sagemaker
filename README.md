@@ -10,8 +10,6 @@ SageMaker에서 제공되는 jupyter Notebook을 통해, 학습에 필요한 데
 
 학습을 위해서 S3에 학습에 필요한 데이터를 업로드합니다. 이후, SageMaker가 학습 클러스터로 S3의 학습데이터를 가져와서 학습을 수행하게 됩니다. 이때, 학습에 필요한 코드는 노트북에서 로드하여 학습클러스터에서 사용합니다. 
 
-[SageMaker Training](https://github.com/kyopark2014/aws-sagemaker/tree/main/training-basic)에서는 xgboost를 이용한 ML 예제에 대한 예제를 설명하고 있습니다. 
-
 ## 학습용 Container 
 
 SageMaker에서 [학습용 Container 생성시 폴더의 경로 및 환경변수](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-container.md)에 대해 설명합니다. 
@@ -144,6 +142,11 @@ estimator = PyTorch(
 	**metric_definitions=metric_definitions,       		# Matric definitions
 )
 ```
+
+## SageMaker Basic
+
+[SageMaker Training](https://github.com/kyopark2014/aws-sagemaker/tree/main/training-basic)에서는 xgboost를 이용한 보험사기를 검출하는 예제를 설명하고 있습니다. 
+
 
 ## SageMaker Experiment
 

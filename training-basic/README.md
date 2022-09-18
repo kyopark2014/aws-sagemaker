@@ -2,7 +2,7 @@
 
 ## Dataset
 
-보험청구사기 Dataset(https://github.com/kyopark2014/aws-sagemaker/blob/main/dataset.md)을 이용해 아래와 같이 ML 학습을 수행하고자 합니다.
+[보험청구사기 Dataset](https://github.com/kyopark2014/aws-sagemaker/blob/main/dataset.md)을 이용해 아래와 같이 ML 학습을 수행하고자 합니다.
 
 ## XGBoost를 이용한 자동차 보험 청구사기 탐지 방법
 

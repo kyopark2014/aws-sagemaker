@@ -82,4 +82,55 @@ script_eval.run(
 )
 ```
 
-이때의 
+이때의 결과는 아래와 같습니다. 
+
+```python
+artifacts_dir = estimator.model_data.replace('model.tar.gz', '')
+print(artifacts_dir)
+!aws s3 ls --human-readable {artifacts_dir}
+
+model_dir = './model'
+
+!rm -rf $model_dir
+
+import json , os
+
+if not os.path.exists(model_dir):
+    os.makedirs(model_dir)
+
+!aws s3 cp {artifacts_dir}model.tar.gz {model_dir}/model.tar.gz
+!tar -xvzf {model_dir}/model.tar.gz -C {model_dir}
+
+!pip install xgboost graphviz
+
+import xgboost as xgb
+import matplotlib.pyplot as plt
+
+model = xgb.XGBClassifier()
+model.load_model("./model/xgboost-model")
+
+test_prep_df = pd.read_csv('./data/dataset/test.csv')
+x_test = test_prep_df.drop('fraud', axis=1)
+feature_data = xgb.DMatrix(x_test)
+model.get_booster().feature_names = feature_data.feature_names
+model.get_booster().feature_types = feature_data.feature_types
+fig, ax = plt.subplots(figsize=(15, 8))
+xgb.plot_importance(model, ax=ax, importance_type='gain')
+```
+
+이때 얻어진 feature importance는 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/190893110-1f3ce6f9-2f24-46b4-ae27-4b9a9d5dacd3.png)
+
+
+```python
+xgb.plot_tree(model, num_trees=0, rankdir='LR')
+
+fig = plt.gcf()
+fig.set_size_inches(50, 15)
+plt.show()
+````
+
+이때의 결과는 아래와 같습니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/190893129-6ca3d28e-74cb-4fbf-9203-23bc4a544924.png)

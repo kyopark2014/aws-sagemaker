@@ -17,7 +17,8 @@ train_prep_df.groupby('fraud').sample(n=5)
 
 ![image](https://user-images.githubusercontent.com/52392004/190880293-1045d20b-9c5b-4d67-8036-55a502df54bb.png)
 
-#### 데이터 컬럼 설명
+각 Cloumn에 대한 설명은 아래와 같습니다. 
+
 - fraud: 보험 청구의 사기 여부 입니다. 1 이면 사기, 0 이면 정상 청구 입니다.
 - vehicle_claim: 자동차에 대한 보험 청구액. 값으로서, $1000, $17,638 등이 있습니다.
 - total_claim_amount: 전체 보험 청구액 입니다. $21,400, $10,000 등이 있습니다.    

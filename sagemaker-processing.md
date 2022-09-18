@@ -27,8 +27,8 @@ processor.run(
 
 [Sagemaker Processing](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training-processing.ipynb)에서는 processing을 설정하여 얻어진 결과를 Jupyter notebook으로 확인 할 수 있습니다. 
 
-아래와 같이 processing을 정의한 후에 [evalutation.py](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/src/evaluation.py)을 실행합니다. 
-
+아래와 같이 processing을 정의한 후에 [evalutation.py](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/src/evaluation.py)을 실행합니다. 입력으로는 s3에서 test_data와 model_weight을 복사하여 "/opt/ml/processing/test"와 "/opt/ml/processing/model"에서 로드하여 사용하고, processing 결과는 "/opt/ml/processing/output"에 넣습니다. 
+	    
 ```python
 from sagemaker.processing import FrameworkProcessor
 from sagemaker.processing import ProcessingInput, ProcessingOutput
@@ -134,3 +134,58 @@ plt.show()
 이때의 결과는 아래와 같습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/190893129-6ca3d28e-74cb-4fbf-9203-23bc4a544924.png)
+
+## Evalution.py 
+
+[evalutation.py](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/src/evaluation.py)의 내용을 보면 아래와 같습니다. 
+
+아래와 같이 model과 test dataset, output에 대한 경로를 읽어옵니다.
+
+```python
+    parser.add_argument('--base_dir', type=str, default= "/opt/ml/processing")    
+    parser.add_argument('--model_path', type=str, default= "/opt/ml/processing/model/model.tar.gz")
+    parser.add_argument('--test_path', type=str, default= "/opt/ml/processing/test/test.csv")
+    parser.add_argument('--output_evaluation_dir', type=str, default="/opt/ml/processing/output")
+```    
+
+model을 load 합니다. 
+
+```python
+    model = xgboost.XGBRegressor()
+    model.load_model("xgboost-model")
+````
+
+Test dataset을 로드하고, predict를 수행합니다. 
+
+```python
+df = pd.read_csv(test_path)
+df.drop(df.columns[0], axis=1, inplace=True)
+
+predictions_prob = model.predict(X_test)
+```
+
+
+MSE를 계산합니다. 
+
+```python
+    mse = mean_squared_error(y_test, predictions)
+    std = np.std(y_test - predictions)
+    report_dict = {
+        "regression_metrics": {
+            "mse": {
+                "value": mse,
+                "standard_deviation": std
+            },
+        },
+    }
+```    
+
+계산된 결과를 저장합니다. 
+
+```python
+    evaluation_path = f"{output_evaluation_dir}/evaluation.json"
+    with open(evaluation_path, "w") as f:
+        f.write(json.dumps(report_dict))
+	
+a	
+	

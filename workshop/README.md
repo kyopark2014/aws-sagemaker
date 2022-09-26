@@ -10,8 +10,6 @@
 git clone https://github.com/aws-samples/amazon-sagemaker-immersion-day.git
 ```
 
-![image](https://user-images.githubusercontent.com/52392004/192143699-bd1943f2-621e-44dd-b36b-73c6c3efbaca.png)
-
 
 ## Reference 
 

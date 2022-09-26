@@ -14,6 +14,10 @@
 git clone https://github.com/aws-samples/amazon-sagemaker-immersion-day.git
 ```
 
+## Lab 1. Feature Engineering
+
+[Feature Engineering](https://github.com/kyopark2014/aws-sagemaker/blob/main/workshop/feature-enginnering.md)에 대해 설명합니다. 
+
 
 ## Reference 
 

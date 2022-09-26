@@ -4,7 +4,11 @@
 
 ## Resouces
 
-아래와 같은 아이콘을 선택하여 [Launch Termial]을 실행후, 아래 명령어로 samples을 다운로드 합니다. 
+"ImmersionDay.ipynb"로 노트북 생성후에, 아래와 같은 아이콘을 선택하여 [Launch Termial]을 실행합니다.
+
+![noname](https://user-images.githubusercontent.com/52392004/192395965-57b5bfa9-35cd-427c-9fab-247251df2a21.png)
+
+아래 명령어로 Git Resouces을 다운로드 합니다. 
 
 ```c
 git clone https://github.com/aws-samples/amazon-sagemaker-immersion-day.git

@@ -65,6 +65,7 @@ dtype: int64
 - authorities_contacted: 어떤 관련 기관에 연락을 했는지 입니다. Police, Ambuylance, Fire, None 값이 존재 합니다.
 - police_report_available: 경찰 보고서가 존재하는지를 기술합니다. Yes, No 의 값이 있습니다.
 
+학습 완료후에 Floud detection과 관련된 각 Column의 중요도는 아래와 같습니다. 
 
 ![image](https://user-images.githubusercontent.com/52392004/188274540-dbc1b452-c2a9-47c9-b044-7af233f93e32.png)
 

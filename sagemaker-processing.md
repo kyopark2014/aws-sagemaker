@@ -25,7 +25,7 @@ processor.run(
 
 ## Evaluation을 Processing을 이용해 수행하는 예제 
 
-[Sagemaker Processing](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training-processing.ipynb)에서는 processing을 설정하여 기생성된 model로 test dataset을 분석하는것을 보여줍니다. 
+[training-processing.ipynb](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training-processing.ipynb)에서는 processing을 설정하여 기생성된 model로 test dataset을 분석하는것을 보여줍니다. 
 
 아래와 같이 processing을 정의한 후에 [evalutation.py](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/src/evaluation.py)을 실행합니다. 입력으로는 s3에서 test_data와 model_weight을 복사하여 "/opt/ml/processing/test"와 "/opt/ml/processing/model"에서 로드하여 사용하고, processing 결과는 "/opt/ml/processing/output"에 넣습니다. 
 	    

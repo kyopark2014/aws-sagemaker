@@ -1,5 +1,7 @@
 # SageMaker Processing
 
+## Processing을 이용해 Preprocessing을 수행하는 예제
+
 사전 처리, 후 처리 및 모델 평가를 실행할 수 있는 환경을 제공합니다. S3의 데이터를 입력으로 받아 로직 처리 후 S3에 출력으로 저장합니다.
 
 아래에서는 processor를 정의한 후에 "preprocessing.py"을 이용해 데이터를 처리하고, 결과인 train/validation을 S3에 저장하는 코드를 보여주고 있습니다. 
@@ -23,7 +25,7 @@ processor.run(
 )
 ```
 
-## Evaluation을 Processing을 이용해 수행하는 예제 
+## Processing을 이용해 Evaluation을 수행하는 예제 
 
 [training-processing.ipynb](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training-processing.ipynb)에서는 processing을 설정하여 기생성된 model로 test dataset을 분석하는것을 보여줍니다. 
 
@@ -135,7 +137,7 @@ plt.show()
 
 ![image](https://user-images.githubusercontent.com/52392004/190893129-6ca3d28e-74cb-4fbf-9203-23bc4a544924.png)
 
-## Evalution.py 설명 
+### Evalution.py 설명 
 
 [evalutation.py](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/src/evaluation.py)의 내용을 보면 아래와 같습니다. XGBoost 모델을 로드하여 test dataset으로 predict를 수행하고 결과를 S3에 저장합니다. 
 

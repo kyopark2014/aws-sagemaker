@@ -157,6 +157,9 @@ estimator = PyTorch(
 
 [SageMaker Processing](https://github.com/kyopark2014/aws-sagemaker/blob/main/sagemaker-processing.md)으로 사전 처리, 후 처리 및 모델 평가를 실행할 수 있는 환경을 제공합니다. S3의 데이터를 입력으로 받아 로직 처리 후 S3에 출력으로 저장후 SageMaker에서 dataset으로 사용할 수 있습니다. 
 
+## Workshop
+
+[SageMaker Immersion Day Workshop](https://github.com/kyopark2014/aws-sagemaker/tree/main/workshop)에 대해 설명합니다.
 
 ## Monitoring
 

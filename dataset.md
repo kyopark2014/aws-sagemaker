@@ -17,7 +17,7 @@ train_prep_df.groupby('fraud').sample(n=5)
 
 ![image](https://user-images.githubusercontent.com/52392004/190880293-1045d20b-9c5b-4d67-8036-55a502df54bb.png)
 
-전체에서 froud의 숫자는 아래와 같습니다. 
+전체에서 froud의 숫자는 아래와 같이 확인합니다. 
 
 ```python
 train_prep_df.groupby('fraud').size()

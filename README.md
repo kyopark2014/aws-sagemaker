@@ -98,7 +98,7 @@ estimator.fit(
 )
 ```
 
-## Local Mode Debuging
+## Local Mode Debugging
 
 생성한 SageMaker Notebook에서 학습 코드를 개발할 목적으로 Local Mode로 사용할 수 있습니다.
 

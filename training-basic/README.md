@@ -46,8 +46,8 @@ hyperparameters = {
 
 ```python
 instance_count = 1
-# instance_type = "ml.m5.large"
-instance_type = "local"
+instance_type = "ml.m5.large"
+# instance_type = "local"
 max_run = 1*60*60
 
 use_spot_instances = False

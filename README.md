@@ -139,7 +139,7 @@ estimator = PyTorch(
 	instance_type="ml.p4d.24xlarge",             		# 학습 인스턴스 명
 	sagemaker_session=sagemaker_session,			# SageMaker 세션
 	hyperparameters=hyperparameters,			# 하이퍼파라미터 설정
-	**metric_definitions=metric_definitions,       		# Matric definitions
+	metric_definitions=metric_definitions,       		# Matric definitions
 )
 ```
 

@@ -105,8 +105,7 @@ inputs
 8) 학습을 시작합니다. 
 
 ```python
-estimator.fit(inputs = {'inputdata': inputs},
-                  wait=False)
+estimator.fit(inputs = {'inputdata': inputs}, wait=False)
 ```
 
 ## 학습결과

@@ -1,6 +1,6 @@
 # HPO
 
-현재의 dataset을 이용하여 [HPO(Hyperparameter Optimization)](https://github.com/kyopark2014/ML-Algorithms/blob/main/hyperparameter-optimization.md)을 구하는 과정을 설명합니다. [HPO 구현](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training-experiment-HPO.ipynb)의 내용을 아래와 같이 설명하고자 합니다.
+현재의 dataset을 이용하여 [HPO(Hyperparameter Optimization)](https://github.com/kyopark2014/ML-Algorithms/blob/main/hyperparameter-optimization.md)을 구하는 과정을 설명합니다. [HPO - training-experiment-HPO.ipynb](https://github.com/kyopark2014/aws-sagemaker/blob/main/training-basic/training-experiment-HPO.ipynb)의 내용을 아래와 같이 설명하고자 합니다.
 
 아래와 같이 HPO를 수행합니다. max_depth와 eta에 대해 최적의 Hyperparameter를 찾도록 설정하였습니다. 
 

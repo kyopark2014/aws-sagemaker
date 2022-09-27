@@ -84,7 +84,9 @@ data_path = FileSystemInput(file_system_id='fs-2’, file_system_type='FSxLustre
 			   file_system_access_mode='ro’)
 ```
 
-S3에서 파일을 복사하는 시간이 오래 걸리면, GPU를 가진 프로세서가 기다려야하므로, Lustre를 검토할 수 있습니다. (수십 GB 이상) FileSystemInput으로 사용할때는 복사하지 않고 마운트하여 읽어오게 됩니다. 
+S3에서 파일을 복사하는 시간이 오래 걸리면, GPU를 가진 프로세서가 기다려야하므로, Lustre를 검토할 수 있습니다. (수십 GB 이상) 
+
+FileSystemInput으로 사용할때는 복사하지 않고 마운트하여 읽어오게 됩니다. 
 
 
 ## 학습 시작

@@ -9,14 +9,15 @@
 [hpo_xgboost_direct_marketing_sagemaker_python_sdk.ipynb](https://github.com/kyopark2014/aws-sagemaker/blob/main/sagemaker-examples/direct-marketing-xgboost/hpo_xgboost_direct_marketing_sagemaker_python_sdk.ipynb)은 편의상 [원본 - hpo_xgboost_direct_marketing_sagemaker_APIs.ipynb](https://github.com/aws/amazon-sagemaker-examples/blob/main/hyperparameter_tuning/xgboost_direct_marketing/hpo_xgboost_direct_marketing_sagemaker_APIs.ipynb)을 가져와서 수정하였습니다. 
 
 
-four datasets:
+### Datasets
+
 1) bank-additional-full.csv with all examples (41188) and 20 inputs, ordered by date (from May 2008 to November 2010), very close to the data analyzed in [Moro et al., 2014]
 2) bank-additional.csv with 10% of the examples (4119), randomly selected from 1), and 20 inputs.
 3) bank-full.csv with all examples and 17 inputs, ordered by date (older version of this dataset with less inputs).
 4) bank.csv with 10% of the examples and 17 inputs, randomly selected from 3 (older version of this dataset with less inputs).
 The smallest datasets are provided to test more computationally demanding machine learning algorithms (e.g., SVM).
 
-Attribute Information:
+### Attribute Information:
 
 Input variables:
 # bank client data:

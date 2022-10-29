@@ -178,3 +178,5 @@ GPU/CPU 리소스 사용량은 아래처럼 CloudWatch를 통해 확인할 수 �
 [Amazon SageMaker 모델 학습 방법 소개 - AWS AIML 스페셜 웨비나](https://www.youtube.com/watch?v=oQ7glJfD-BQ&list=PLORxAVAC5fUULZBkbSE--PSY6bywP7gyr)
 
 [SageMaker 스페셜 웨비나 - Github](https://github.com/aws-samples/aws-ai-ml-workshop-kr/tree/master/sagemaker/sm-special-webinar)
+
+[Direct Marketing with Amazon SageMaker XGBoost and Hyperparameter Tuning (SageMaker SDK)](https://sagemaker-examples.readthedocs.io/en/latest/hyperparameter_tuning/xgboost_direct_marketing/hpo_xgboost_direct_marketing_sagemaker_APIs.html)

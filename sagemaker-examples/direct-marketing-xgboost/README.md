@@ -10,6 +10,28 @@
 - 데이터 편향이 커서 cross validation시 accuracy가 낮은 값이 나오지민, Bayesian optiimization을 통해 HPO를 수행하면 0.9의 정확도를 가질수 있습니다.
 - Shuffle을 통해 데이터를 섞으면 기본 classification에서도 좋은 결과를 얻을 수 있습니다. 
 
+
+Classification Report의 결과는 아래와 같습니다. 
+```java
+              precision    recall  f1-score   support
+
+           0       0.91      0.99      0.95      9173
+           1       0.66      0.18      0.28      1124
+
+    accuracy                           0.90     10297
+   macro avg       0.78      0.58      0.62     10297
+weighted avg       0.88      0.90      0.87     10297
+```
+
+특성 중요도(Feature Importance)는 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/198857005-f1cb580f-f63d-49fb-8256-dd6cdfc02142.png)
+
+또한 아래처럼 트리구조로도 특성 중요도를 확인할 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/198857015-698aff4b-a2f6-49d4-a958-4f389695f124.png)
+
+
 ## Bank Marketing Data Set
 
 [Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/bank+marketing)은 "Portuguese banking institution"의 direct marketing campaign 데이터셋입니다. 이것은 전화상담에 대한 campaign 자료이며, 같은 사용자에게 여러번 contact한 정보를 가지고 있을 수 있습니다. 여기서는 Sagemaker를 이용하여 XGBoost로 Direct Marketing 데이터를 학습할때 HPO 방법에 대해 설명합니다. 

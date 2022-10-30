@@ -1,10 +1,5 @@
 # Direct Marketing with Amazon SageMaker XGBoost and Hyperparameter Tuning (SageMaker API)
 
-## Dataset
-
-[Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/bank+marketing)은 "Portuguese banking institution"의 direct marketing campaign 데이터셋입니다. 이것은 전화상담에 대한 campaign 자료이며, 같은 사용자에게 여러번 contact한 정보를 가지고 있을 수 있습니다. 여기서는 Sagemaker를 이용하여 XGBoost로 Direct Marketing 데이터를 학습할때 HPO 방법에 대해 설명합니다. 
-
-[hpo_xgboost_direct_marketing_sagemaker_python_sdk.ipynb](https://github.com/kyopark2014/aws-sagemaker/blob/main/sagemaker-examples/direct-marketing-xgboost/hpo_xgboost_direct_marketing_sagemaker_python_sdk.ipynb)은 편의상 [원본 - hpo_xgboost_direct_marketing_sagemaker_APIs.ipynb](https://github.com/aws/amazon-sagemaker-examples/blob/main/hyperparameter_tuning/xgboost_direct_marketing/hpo_xgboost_direct_marketing_sagemaker_APIs.ipynb)을 가져와서 수정하였습니다. 
 
 
 ## XGBoost를 이용한 분류
@@ -15,7 +10,13 @@
 - 데이터 편향이 커서 cross validation시 accuracy가 낮은 값이 나오지민, Bayesian optiimization을 통해 HPO를 수행하면 0.9의 정확도를 가질수 있습니다.
 - Shuffle을 통해 데이터를 섞으면 기본 classification에서도 좋은 결과를 얻을 수 있습니다. 
 
-## Datasets
+## Bank Marketing Data Set
+
+[Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/bank+marketing)은 "Portuguese banking institution"의 direct marketing campaign 데이터셋입니다. 이것은 전화상담에 대한 campaign 자료이며, 같은 사용자에게 여러번 contact한 정보를 가지고 있을 수 있습니다. 여기서는 Sagemaker를 이용하여 XGBoost로 Direct Marketing 데이터를 학습할때 HPO 방법에 대해 설명합니다. 
+
+[hpo_xgboost_direct_marketing_sagemaker_python_sdk.ipynb](https://github.com/kyopark2014/aws-sagemaker/blob/main/sagemaker-examples/direct-marketing-xgboost/hpo_xgboost_direct_marketing_sagemaker_python_sdk.ipynb)은 편의상 [원본 - hpo_xgboost_direct_marketing_sagemaker_APIs.ipynb](https://github.com/aws/amazon-sagemaker-examples/blob/main/hyperparameter_tuning/xgboost_direct_marketing/hpo_xgboost_direct_marketing_sagemaker_APIs.ipynb)을 가져와서 수정하였습니다. 
+
+### Datasets
 
 1) bank-additional-full.csv with all examples (41188) and 20 inputs, ordered by date (from May 2008 to November 2010), very close to the data analyzed in [Moro et al., 2014]
 

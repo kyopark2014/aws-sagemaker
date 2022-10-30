@@ -7,7 +7,15 @@
 [hpo_xgboost_direct_marketing_sagemaker_python_sdk.ipynb](https://github.com/kyopark2014/aws-sagemaker/blob/main/sagemaker-examples/direct-marketing-xgboost/hpo_xgboost_direct_marketing_sagemaker_python_sdk.ipynb)은 편의상 [원본 - hpo_xgboost_direct_marketing_sagemaker_APIs.ipynb](https://github.com/aws/amazon-sagemaker-examples/blob/main/hyperparameter_tuning/xgboost_direct_marketing/hpo_xgboost_direct_marketing_sagemaker_APIs.ipynb)을 가져와서 수정하였습니다. 
 
 
-### Datasets
+## XGBoost를 이용한 분류
+
+[xgboost-direct-marketing.ipynb
+](https://github.com/kyopark2014/aws-sagemaker/blob/main/sagemaker-examples/direct-marketing-xgboost/xgboost-direct-marketing.ipynb)와 같이 XGBoost Classification을 적용할 수 있습니다.
+
+- 데이터 편향이 커서 cross validation시 accuracy가 낮은 값이 나오지민, Bayesian optiimization을 통해 HPO를 수행하면 0.9의 정확도를 가질수 있습니다.
+- Shuffle을 통해 데이터를 섞으면 기본 classification에서도 좋은 결과를 얻을 수 있습니다. 
+
+## Datasets
 
 1) bank-additional-full.csv with all examples (41188) and 20 inputs, ordered by date (from May 2008 to November 2010), very close to the data analyzed in [Moro et al., 2014]
 

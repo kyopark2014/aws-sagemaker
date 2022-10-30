@@ -4,7 +4,7 @@
 
 ## XGBoost를 이용한 분류
 
-[xgboost-direct-marketing.ipynb
+[Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/bank+marketing)을 [xgboost-direct-marketing.ipynb
 ](https://github.com/kyopark2014/aws-sagemaker/blob/main/sagemaker-examples/direct-marketing-xgboost/xgboost-direct-marketing.ipynb)와 같이 XGBoost Classification을 적용할 수 있습니다.
 
 - 데이터 편향이 커서 cross validation시 accuracy가 낮은 값이 나오지민, Bayesian optiimization을 통해 HPO를 수행하면 0.9의 정확도를 가질수 있습니다.

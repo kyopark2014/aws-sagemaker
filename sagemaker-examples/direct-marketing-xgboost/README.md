@@ -36,6 +36,9 @@ weighted avg       0.88      0.90      0.87     10297
 
 [Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/bank+marketing)은 "Portuguese banking institution"의 direct marketing campaign 데이터셋입니다. 이것은 전화상담에 대한 campaign 자료이며, 같은 사용자에게 여러번 contact한 정보를 가지고 있을 수 있습니다. 여기서는 Sagemaker를 이용하여 XGBoost로 Direct Marketing 데이터를 학습할때 HPO 방법에 대해 설명합니다. 
 
+![image](https://user-images.githubusercontent.com/52392004/198857032-ee522207-e6c3-4049-a4be-d4048733102d.png)
+
+
 [hpo_xgboost_direct_marketing_sagemaker_python_sdk.ipynb](https://github.com/kyopark2014/aws-sagemaker/blob/main/sagemaker-examples/direct-marketing-xgboost/hpo_xgboost_direct_marketing_sagemaker_python_sdk.ipynb)은 편의상 [원본 - hpo_xgboost_direct_marketing_sagemaker_APIs.ipynb](https://github.com/aws/amazon-sagemaker-examples/blob/main/hyperparameter_tuning/xgboost_direct_marketing/hpo_xgboost_direct_marketing_sagemaker_APIs.ipynb)을 가져와서 수정하였습니다. 
 
 ### Datasets

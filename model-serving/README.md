@@ -1,5 +1,10 @@
 # Model Serving
 
+## Deployment 
+
+[Amazon SageMaker 모델 배포 방법 소개](https://www.youtube.com/watch?v=UigWJPfClcI&list=PLORxAVAC5fUULZBkbSE--PSY6bywP7gyr&index=2)
+
+![image](https://user-images.githubusercontent.com/52392004/229521991-b88aaefc-90f7-45c9-ac5e-e7d22e61b9c5.png)
 
 
 ## Reference 

@@ -2,11 +2,14 @@
 
 ## Deployment 
 
-[Amazon SageMaker 모델 배포 방법 소개](https://www.youtube.com/watch?v=UigWJPfClcI&list=PLORxAVAC5fUULZBkbSE--PSY6bywP7gyr&index=2)
+[Amazon SageMaker 모델 배포 방법 소개](https://www.youtube.com/watch?v=UigWJPfClcI&list=PLORxAVAC5fUULZBkbSE--PSY6bywP7gyr&index=2)에서 아래와 같이 설명하고 있습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/229521991-b88aaefc-90f7-45c9-ac5e-e7d22e61b9c5.png)
 
 ![image](https://user-images.githubusercontent.com/52392004/229522433-4a555d05-a3e7-4783-98dc-1444dd92ae67.png)
+
+![image](https://user-images.githubusercontent.com/52392004/229522923-058c70e0-80bd-4339-8fc4-e022821a2552.png)
+
 
 ## Reference 
 
